@@ -8,7 +8,7 @@ build_prefix="-arm64-r"
 branch_prefix="v"
 branch_postfix=".x"
 
-#https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/Documentation/process/changes.rst?h=v5.18-rc1
+#https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/Documentation/process/changes.rst?h=v5.19-rc1
 #arm
 #KERNEL_ARCH=arm
 #DEBARCH=armhf
@@ -27,8 +27,8 @@ DEBARCH=arm64
 #toolchain="gcc_8_aarch64"
 #toolchain="gcc_9_aarch64"
 #toolchain="gcc_10_aarch64"
-toolchain="gcc_11_aarch64"
-#toolchain="gcc_12_aarch64"
+#toolchain="gcc_11_aarch64"
+toolchain="gcc_12_aarch64"
 #riscv64
 #KERNEL_ARCH=riscv
 #DEBARCH=riscv64
@@ -40,8 +40,8 @@ toolchain="gcc_11_aarch64"
 #toolchain="gcc_12_riscv64"
 
 #Kernel
-KERNEL_REL=5.18
-KERNEL_TAG=${KERNEL_REL}
+KERNEL_REL=5.19
+KERNEL_TAG=${KERNEL_REL}-rc1
 kernel_rt=".X-rtY"
 #Kernel Build
 BUILD=${build_prefix}0
