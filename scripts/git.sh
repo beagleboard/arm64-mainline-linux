@@ -77,6 +77,7 @@ unsecure_git_kernel_torvalds () {
 git_kernel_torvalds () {
 	echo "-----------------------------"
 	echo "scripts/git: pulling from: ${torvalds_linux}"
+	echo "log: [${git_bin} pull --no-rebase --no-edit "${torvalds_linux}" master --tags]"
 	${git_bin} pull --no-rebase --no-edit "${torvalds_linux}" master --tags || unsecure_git_kernel_torvalds
 	${git_bin} tag | grep v"${KERNEL_TAG}" >/dev/null 2>&1 || git_kernel_stable
 }
