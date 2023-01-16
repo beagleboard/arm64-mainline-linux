@@ -620,8 +620,8 @@ git_sub=$(LC_ALL=C ${git_bin} --version | awk '{print $3}' | cut -d. -f3)
 #https://packages.ubuntu.com/jammy/git (22.04) -> 2.34.1
 
 compare_major="2"
-compare_minor="11"
-compare_sub="0"
+compare_minor="20"
+compare_sub="1"
 
 unset build_git
 

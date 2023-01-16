@@ -22,7 +22,7 @@
 
 DIR=$PWD
 CORES=$(getconf _NPROCESSORS_ONLN)
-debian_stable_git="2.11.0"
+debian_stable_git="2.20.1"
 #git hard requirements:
 #git: --local
 #git: --list
@@ -282,8 +282,8 @@ git_sub=$(LC_ALL=C ${git_bin} --version | awk '{print $3}' | cut -d. -f3)
 #https://packages.ubuntu.com/jammy/git (22.04) -> 2.34.1
 
 compare_major="2"
-compare_minor="11"
-compare_sub="0"
+compare_minor="20"
+compare_sub="1"
 
 if [ "${git_major}" -lt "${compare_major}" ] ; then
 	build_git
