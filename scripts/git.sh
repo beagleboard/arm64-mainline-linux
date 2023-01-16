@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# Copyright (c) 2009-2017 Robert Nelson <robertcnelson@gmail.com>
+# Copyright (c) 2009-2023 Robert Nelson <robertcnelson@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,7 @@ debian_stable_git="2.1.4"
 #git: --local
 #git: --list
 #git: --no-edit
+#git: --no-rebase
 
 build_git () {
 	echo "-----------------------------"
@@ -76,7 +77,7 @@ unsecure_git_kernel_torvalds () {
 git_kernel_torvalds () {
 	echo "-----------------------------"
 	echo "scripts/git: pulling from: ${torvalds_linux}"
-	${git_bin} pull --no-edit "${torvalds_linux}" master --tags || unsecure_git_kernel_torvalds
+	${git_bin} pull --no-rebase --no-edit "${torvalds_linux}" master --tags || unsecure_git_kernel_torvalds
 	${git_bin} tag | grep v"${KERNEL_TAG}" >/dev/null 2>&1 || git_kernel_stable
 }
 
@@ -272,7 +273,12 @@ git_minor=$(LC_ALL=C ${git_bin} --version | awk '{print $3}' | cut -d. -f2)
 git_sub=$(LC_ALL=C ${git_bin} --version | awk '{print $3}' | cut -d. -f3)
 
 #debian Stable:
-#https://packages.debian.org/stable/git -> 2.1.4
+#https://packages.debian.org/stretch/git -> 2.11.0
+#https://packages.debian.org/buster/git -> 2.20.1
+#https://packages.debian.org/bullseye/git -> 2.30.2
+#https://packages.ubuntu.com/bionic/git (18.04) -> 2.17.1
+#https://packages.ubuntu.com/focal/git (20.04) -> 2.25.1
+#https://packages.ubuntu.com/jammy/git (22.04) -> 2.34.1
 
 compare_major="2"
 compare_minor="1"

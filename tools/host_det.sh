@@ -473,19 +473,19 @@ debian_regs () {
 		#https://wiki.ubuntu.com/Releases
 		unset error_unknown_deb_distro
 		case "${deb_distro}" in
-		jessie|stretch|buster|bullseye|bookworm|sid)
+		stretch|buster|bullseye|bookworm|sid)
 			#https://wiki.debian.org/LTS
-			#8 jessie: https://wiki.debian.org/DebianJessie
 			#9 stretch: https://wiki.debian.org/DebianStretch
 			#10 buster: https://wiki.debian.org/DebianBuster
 			#11 bullseye: https://wiki.debian.org/DebianBullseye
 			#12 bookworm: https://wiki.debian.org/DebianBookworm
 			unset warn_eol_distro
 			;;
-		squeeze|wheezy)
+		squeeze|wheezy|jessie)
 			#https://wiki.debian.org/LTS
 			#6 squeeze: 2016-02-29 https://wiki.debian.org/DebianSqueeze
 			#7 wheezy: 2018-05-31 https://wiki.debian.org/DebianWheezy
+			#8 jessie: 2020-06-30 https://wiki.debian.org/DebianJessie
 			warn_eol_distro=1
 			stop_pkg_search=1
 			;;
