@@ -612,11 +612,16 @@ git_minor=$(LC_ALL=C ${git_bin} --version | awk '{print $3}' | cut -d. -f2)
 git_sub=$(LC_ALL=C ${git_bin} --version | awk '{print $3}' | cut -d. -f3)
 
 #debian Stable:
-#https://packages.debian.org/stable/git -> 2.1.4
+#https://packages.debian.org/stretch/git -> 2.11.0
+#https://packages.debian.org/buster/git -> 2.20.1
+#https://packages.debian.org/bullseye/git -> 2.30.2
+#https://packages.ubuntu.com/bionic/git (18.04) -> 2.17.1
+#https://packages.ubuntu.com/focal/git (20.04) -> 2.25.1
+#https://packages.ubuntu.com/jammy/git (22.04) -> 2.34.1
 
 compare_major="2"
-compare_minor="1"
-compare_sub="4"
+compare_minor="11"
+compare_sub="0"
 
 unset build_git
 
