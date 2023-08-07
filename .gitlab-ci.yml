@@ -1,0 +1,32 @@
+image: robertcnelson/debian-bookworm-slim-ti-linux-kernel-dev:latest
+
+cache:
+  key: "$CI_PROJECT_NAME"
+  paths:
+    - dl/*.tar.xz
+    - ccache.tar.gz
+
+build:
+  tags:
+    - docker-amd64
+  stage: build
+  script:
+    - . version.sh && echo $BRANCH
+    - mkdir -p /root/.cache/ccache/ || true
+    - ccache -s
+    - tar -xf ccache.tar.gz -C / || true
+    - ccache -s
+    - cp -v system.sh.sample system.sh
+    - echo "AUTO_BUILD=1" >> system.sh
+    - echo "LINUX_GIT=/mnt/yocto-cache/git/linux-src/" >> system.sh
+    - git config --global --add safe.directory /mnt/yocto-cache/git/linux-src
+    - ./build_deb.sh
+    - du -sh deploy/linux-image-*.deb || true
+    - ccache -s
+    - tar -cf ccache.tar.gz /root/.cache/ccache/
+  artifacts:
+    expire_in: 14 days
+    name: "$CI_PROJECT_NAME-$CI_JOB_ID"
+    paths:
+      - "deploy/linux-image-*.deb"
+
