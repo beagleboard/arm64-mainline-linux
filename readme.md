@@ -6,6 +6,10 @@ https://github.com/beagleboard/arm64-mainline-linux/issues
 
 https://git.beagleboard.org/beagleboard/arm64-mainline-linux/-/jobs
 
+# Weekly Build image for BBAI64 and PLAY (CRON job Wednesday Morning)
+
+https://rcn-ee.net/rootfs/debian-arm64-12-bookworm-minimal-mainline/
+
 # Info
 
 This is just a set of scripts to rebuild a known working kernel for ARM devices.
