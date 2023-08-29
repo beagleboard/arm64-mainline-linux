@@ -10,6 +10,11 @@ https://git.beagleboard.org/beagleboard/arm64-mainline-linux/-/jobs
 
 https://rcn-ee.net/rootfs/debian-arm64-12-bookworm-minimal-mainline/
 
+# CI: Linux-next (daily 9am):
+
+https://git.beagleboard.org/beagleboard/arm64-linux-next
+https://git.beagleboard.org/beagleboard/arm64-linux-next/-/jobs
+
 # Info
 
 This is just a set of scripts to rebuild a known working kernel for ARM devices.
