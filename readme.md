@@ -10,10 +10,27 @@ https://git.beagleboard.org/beagleboard/arm64-mainline-linux/-/jobs
 
 https://rcn-ee.net/rootfs/debian-arm64-12-bookworm-minimal-mainline/
 
+# CI: Linux-stable (daily 9am):
+
+https://git.beagleboard.org/beagleboard/arm64-linux
+https://git.beagleboard.org/beagleboard/arm64-linux/-/jobs
+
+Add repo via:
+
+```
+sudo sh -c "echo 'deb [trusted=yes] https://beagleboard.beagleboard.io/arm64-linux stable main' > /etc/apt/sources.list.d/arm64-linux.list"
+```
+
 # CI: Linux-next (daily 9am):
 
 https://git.beagleboard.org/beagleboard/arm64-linux-next
 https://git.beagleboard.org/beagleboard/arm64-linux-next/-/jobs
+
+Add repo via:
+
+```
+sudo sh -c "echo 'deb [trusted=yes] https://beagleboard.beagleboard.io/arm64-linux-next stable main' > /etc/apt/sources.list.d/arm64-linux-next.list"
+```
 
 # Info
 
