@@ -3,8 +3,8 @@ image: robertcnelson/debian-bookworm-slim-ti-linux-kernel-dev:latest
 cache:
   key: "$CI_PROJECT_NAME"
   paths:
-    - ccache.tar.gz
     - dl/*.tar.xz
+    - ccache.tar.gz
 
 build:
   tags:
@@ -29,4 +29,3 @@ build:
     name: "$CI_PROJECT_NAME-$CI_JOB_ID"
     paths:
       - "deploy/linux-image-*.deb"
-
