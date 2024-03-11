@@ -4,7 +4,7 @@ https://github.com/beagleboard/arm64-mainline-linux/issues
 
 # CI:
 
-https://git.beagleboard.org/beagleboard/arm64-mainline-linux/-/jobs
+https://openbeagle.org/beagleboard/arm64-mainline-linux/-/jobs
 
 # Weekly Build image for BBAI64 and PLAY (CRON job Wednesday Morning)
 
@@ -12,8 +12,8 @@ https://rcn-ee.net/rootfs/debian-arm64-12-bookworm-minimal-mainline/
 
 # CI: Linux-stable (daily 9am):
 
-https://git.beagleboard.org/beagleboard/arm64-linux
-https://git.beagleboard.org/beagleboard/arm64-linux/-/jobs
+https://openbeagle.org/beagleboard/arm64-linux
+https://openbeagle.org/beagleboard/arm64-linux/-/jobs
 
 Add repo via:
 
@@ -23,8 +23,8 @@ sudo sh -c "echo 'deb [trusted=yes] https://beagleboard.beagleboard.io/arm64-lin
 
 # CI: Linux-next (daily 9am):
 
-https://git.beagleboard.org/beagleboard/arm64-linux-next
-https://git.beagleboard.org/beagleboard/arm64-linux-next/-/jobs
+https://openbeagle.org/beagleboard/arm64-linux-next
+https://openbeagle.org/beagleboard/arm64-linux-next/-/jobs
 
 Add repo via:
 
