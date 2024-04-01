@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# Copyright (c) 2009-2021 Robert Nelson <robertcnelson@gmail.com>
+# Copyright (c) 2009-2024 Robert Nelson <robertcnelson@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -60,6 +60,8 @@ make_menuconfig () {
 	make ARCH=${KERNEL_ARCH} CROSS_COMPILE="${CC}" "${config}"
 	make ARCH=${KERNEL_ARCH} CROSS_COMPILE="${CC}" menuconfig
 	./scripts/config --disable CONFIG_LOCALVERSION_AUTO
+	./scripts/config --enable CONFIG_MODULE_COMPRESS_ZSTD
+	./scripts/config --enable CONFIG_MODULE_DECOMPRESS
 	./scripts/config --disable CONFIG_DEBUG_INFO
 	./scripts/config --enable CONFIG_DEBUG_INFO_NONE
 	./scripts/config --disable CONFIG_DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT
