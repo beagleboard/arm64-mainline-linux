@@ -18,7 +18,7 @@ https://openbeagle.org/beagleboard/arm64-linux/-/jobs
 Add repo via:
 
 ```
-sudo sh -c "echo 'deb [trusted=yes] https://beagleboard.beagleboard.io/arm64-linux stable main' > /etc/apt/sources.list.d/arm64-linux.list"
+sudo add-apt-repository "deb [trusted=yes] https://beagleboard.beagleboard.io/arm64-linux stable main"
 ```
 
 # CI: Linux-next (daily 9am):
@@ -29,7 +29,7 @@ https://openbeagle.org/beagleboard/arm64-linux-next/-/jobs
 Add repo via:
 
 ```
-sudo sh -c "echo 'deb [trusted=yes] https://beagleboard.beagleboard.io/arm64-linux-next stable main' > /etc/apt/sources.list.d/arm64-linux-next.list"
+sudo add-apt-repository "deb [trusted=yes] https://beagleboard.beagleboard.io/arm64-linux-next stable main"
 ```
 
 # Info
