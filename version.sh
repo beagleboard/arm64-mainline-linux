@@ -31,8 +31,8 @@ DEBARCH=arm64
 #toolchain="gcc_10_aarch64"
 #toolchain="gcc_11_aarch64"
 #toolchain="gcc_12_aarch64"
-toolchain="gcc_13_aarch64"
-#toolchain="gcc_14_aarch64"
+#toolchain="gcc_13_aarch64"
+toolchain="gcc_14_aarch64"
 #riscv64
 #KERNEL_ARCH=riscv
 #DEBARCH=riscv64
@@ -47,7 +47,7 @@ toolchain="gcc_13_aarch64"
 
 #Kernel
 KERNEL_REL=6.10
-KERNEL_TAG=${KERNEL_REL}-rc6
+KERNEL_TAG=${KERNEL_REL}-rc7
 kernel_rt=".X-rtY"
 #Kernel Build
 BUILD=${build_prefix}1
